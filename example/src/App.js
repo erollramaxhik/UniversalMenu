@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { ExampleComponent } from 'universal-menu'
+import { UniversalMenu } from 'universal-menu'
 import 'universal-menu/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <UniversalMenu />
 }
 
 export default App

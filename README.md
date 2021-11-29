@@ -15,12 +15,12 @@ npm install --save universal-menu
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'universal-menu'
+import UniversalMenu from 'universal-menu'
 import 'universal-menu/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <UniversalMenu />
   }
 }
 ```
