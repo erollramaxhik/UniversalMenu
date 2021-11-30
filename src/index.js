@@ -21,14 +21,16 @@ export const UniversalMenu = () => {
                 columns
                 scroll
             >
-                <FlexContainer m='30px 30px 15px 30px'>
-                    <h6>Universal Menu</h6>
+                <FlexContainer m='10px 30px 0px 30px'>
+                    <h4>Universal Menu</h4>
                 </FlexContainer>
                 <Switch mode={mode} />
                 <PresentationViews mode={mode} />
                 <LibrarySection mode={mode} />
                 <StudioSection mode={mode} />
-                <HorizontalRule mode={mode} />
+                <FlexContainer>
+                    <HorizontalRule mode={mode} />
+                </FlexContainer>
                 <Portals mode={mode} />
             </FlexContainer>
         </Wrapper>

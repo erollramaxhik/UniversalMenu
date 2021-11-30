@@ -11,7 +11,7 @@ const list = [
 
 export function StudioSection(props){
     return(
-        <FlexContainer m='10px 0 5px 0' columns>
+        <FlexContainer columns mb='20px'>
             <SectionHeading>Studio</SectionHeading>
             {list.map((item, index) => (
                 <ListItem key={index} text={item.text} icon={item.icon} mode={props.mode} />

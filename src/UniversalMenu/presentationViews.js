@@ -13,7 +13,7 @@ const list = [
 
 export function PresentationViews(props){
     return(
-        <FlexContainer m='25px 0 0 0' columns>
+        <FlexContainer columns>
             <SectionHeading>presentation views</SectionHeading>
             {list.map((item, index) => (
                 <ListItem key={index} text={item.text} icon={item.icon} mode={props.mode} />

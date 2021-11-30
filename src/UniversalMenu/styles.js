@@ -41,11 +41,9 @@ export const Wrapper = styled.div`
     background: rgba(0,0,0,0.75);
     color:${props => props.mode === 'light' ? 'black' : 'white'};
     z-index: 10;
-    font-family: raleway;
 
-    h6{
+    h4{
         text-transform: capitalize;
-        font-weight: 900;
     }
 `
 
@@ -53,8 +51,7 @@ export const SectionHeading = styled.h6`
     opacity: 0.4;
     font-size: 14px;
     text-transform: capitalize;
-    margin-left: 30px;
-    margin-bottom: 10px;
+    margin: 25px 30px 10px 30px; 
 
     &:hover{
         color: #EB7500;
@@ -70,11 +67,12 @@ export const Button = styled.button`
     background:${props => props.mode === 'light' ? 'rgba(216,216,216,0.3)' : 'rgba(256,256,256,0.05)'}; 
     border-radius: 10px;
     color:${props => props.mode === 'light' ? 'black' : 'white'};
-    font-weight: 600;
+    font-weight: ${props => props.mode === 'dark' ? '550' : ''};
     font-size: 13px;
     margin: 0 auto;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: ${props => props.mb};
+    border: none;
 
     &:hover{
         background: #EB7500;
@@ -82,8 +80,10 @@ export const Button = styled.button`
     }
 `
 
-export const HorizontalRule = styled.hr`
+export const HorizontalRule = styled(FlexContainer)`
     width: 100%;
+    margin-bottom: 0;
+    border: none;
     height: 1px;
-    background: ${props => props.mode === 'light' ? 'rgba(0,0,0,0.15)' : 'rgba(256,256,256,0.2)'}; 
+    background: ${props => props.mode === 'light' ? 'rgba(0,0,0,0.15)' : 'rgba(256,256,256,0.2)'};
 `

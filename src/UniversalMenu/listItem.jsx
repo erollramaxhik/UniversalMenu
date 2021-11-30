@@ -16,14 +16,12 @@ const Wrapper = styled(FlexContainer)`
     }
 
     &:hover{
-        color: #EB7500;
-        font-weight: 600;
-
-        svg{
-            // fill: #EB7500;
-        }
         background: ${props => props.mode === 'light' ? 'rgba(216,216,216,0.3)' : 'rgba(256,256,256,0.05)'};
-        font-weight: 600;
+        
+        div {
+            color: #EB7500;
+            font-weight: 600;
+        }
     }
 `
 
