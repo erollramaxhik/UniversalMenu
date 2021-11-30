@@ -1,6 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from 'styled-components';
 import { FlexContainer } from './styles';
+
+const Wrapper = styled(FlexContainer)`
+    &:hover{
+        cursor: pointer;
+        
+        label{
+            color: #EB7500;
+            font-weight: 600;
+        }
+    }
+`
 
 const Label = styled.label`
     margin-bottom: 0;
@@ -15,8 +26,9 @@ const Input = styled.input`
     -webkit-appearance: none;
     appearance: none;
     background-color: none;
-    cursor: pointer;
+
     z-index: 1;
+    margin: 0;
 
     &::before{
         content: "";
@@ -26,25 +38,30 @@ const Input = styled.input`
 
     &:focus {
         background-color: #EB7500;
-      }
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
 `
 
 const OuterCircle = styled.div`
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    // border: solid 1px rgba(256,256,256,0.5); 
-    border: solid 1px #EB7500; 
+    border: ${props => props.mode === 'light' ? 'solid 1px rgba(0,0,0,0.4)' : 'solid 1px rgba(256,256,256,0.5)'}; 
     position: absolute;
-    left: 27px;
+    left: 26px;
     z-index: 0;
 `
 
 const RadioButton = (props) => {
-    const {label, id, onChange, value, isSelected, name} = props;
+    const {label, id, onChange, value, isSelected, mode} = props;
+
+    const [active, setActive] = useState(false);
 
     return (
-        <FlexContainer vCenter>
+        <Wrapper vCenter mb='3px'>
             <Input 
                 id={id} 
                 onChange={onChange} 
@@ -52,9 +69,9 @@ const RadioButton = (props) => {
                 type="radio" 
                 checked={isSelected}
                 name='portal' />
-                <OuterCircle />
+                <OuterCircle mode={mode} />
             <Label htmlFor={id}>{label}</Label>
-        </FlexContainer>
+        </Wrapper>
     );
 }
 

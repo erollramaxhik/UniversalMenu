@@ -11,7 +11,7 @@ const list = [
 
 export function LibrarySection(props){
     return(
-        <FlexContainer m='20px 0 0 0' columns>
+        <FlexContainer columns>
             <SectionHeading>Library</SectionHeading>
             {list.map((item, index) => (
                 <ListItem key={index} text={item.text} icon={item.icon} mode={props.mode} />
