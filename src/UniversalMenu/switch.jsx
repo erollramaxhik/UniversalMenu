@@ -36,11 +36,11 @@ const DarkButton = styled(FlexContainer)`
 export function Switch(props){
     return(
         <FlexContainer fs='13px' fw='600'>
-            <LightButton width='50%' height='40px'vCenter mode={props.mode}>
+            <LightButton onClick={props.toggleLight} width='50%' height='40px'vCenter mode={props.mode}>
                 <FlexContainer ml='30px' mr='5px'><IconLight mode={props.mode} /></FlexContainer>
                 Light
             </LightButton>
-            <DarkButton width='50%' height='40px' vCenter mode={props.mode}>
+            <DarkButton onClick={props.toggleDark} width='50%' height='40px' vCenter mode={props.mode}>
                 <FlexContainer ml='30px' mr='5px'><IconDark mode={props.mode} /></FlexContainer>
                 Dark
             </DarkButton>
