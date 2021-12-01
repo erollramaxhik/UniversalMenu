@@ -20,7 +20,18 @@ import 'universal-menu/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <UniversalMenu />
+    return <UniversalMenu
+        handleCreateShowroom={handleCreateShowroom}
+        handleCreateCoverPages={handleCreateCoverPages} 
+        LIBRARY_URL={LIBRARY_URL} 
+        CURRENT_ORG={CURRENT_ORG}
+        toggleLight={toggleLight}
+        toggleDark={toggleDark}
+        mode={mode}
+        accounts={accountNames}
+        switchAccount={switchAccount}
+        logout={logout}
+    />
   }
 }
 ```
