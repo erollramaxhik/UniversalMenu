@@ -1,10 +1,10 @@
 {
-  "name": "universal-menu",
+  "name": "@master-wizr/universal-menu",
   "version": "1.0.0",
   "description": "Made with create-react-library",
   "author": "judeinno",
   "license": "MIT",
-  "repository": "judeinno/universal-menu",
+  "repository": "https://github.com/Master-Wizr/UniversalMenu.git",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -52,5 +52,8 @@
   ],
   "dependencies": {
     "styled-components": "^5.3.3"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
